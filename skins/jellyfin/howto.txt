@@ -1,0 +1,1 @@
+@import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom/skins/jellyfin/ashbloom-jellyfin.css');
