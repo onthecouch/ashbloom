@@ -126,13 +126,15 @@ body {
 
 /* Custom Logo Styling */
 .pageTitleWithDefaultLogo {
-    background-image: url('https://i.postimg.cc/W1Z5WFJ4/hdma.png') !important;
+    background-image: url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/hdma.png') !important;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
-    width: 150px;
-    height: 40px;
+    width: 233px;     /* Wider */
+    height: 54px !important;  /* About 73% of header height */
     margin-left: 15px;
+}
+
 }
 
 .pageTitle {
