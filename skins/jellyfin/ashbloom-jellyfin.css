@@ -3606,3 +3606,38 @@ a:hover {
 [class*="volumeSlider"] .mdl-slider-background-lower {
     background: #44BFF1 !important; /* Ashbloom Sky Blue */
 }
+
+/* Force header to have transparent grey background on ALL pages */
+.skinHeader-withBackground:not(.osdHeader) {
+    background: var(--headerColor) !important;
+    backdrop-filter: var(--blurLarge) !important;
+    border-bottom: var(--defaultBorder) !important;
+}
+
+/* Override the semi-transparent header on detail pages */
+#itemDetailPage .skinHeader-withBackground.semiTransparent {
+    --headerBackground: none !important;
+    background: var(--headerColor) !important;
+    backdrop-filter: var(--blurLarge) !important;
+    border-bottom: var(--defaultBorder) !important;
+}
+
+/* Also override the gradient header */
+#itemDetailPage .skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
+    background: var(--headerColor) !important;
+    backdrop-filter: var(--blurLarge) !important;
+    border-bottom: var(--defaultBorder) !important;
+}
+
+/* Remove the gradient background for detail pages */
+#itemDetailPage .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
+#itemDetailPage .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
+    background: var(--headerColor) !important;
+    backdrop-filter: var(--blurLarge) !important;
+}
+
+/* Ensure the header background is consistent on library pages too */
+.libraryPage .skinHeader-withBackground:not(.osdHeader) {
+    background: var(--headerColor) !important;
+    backdrop-filter: var(--blurLarge) !important;
+}
