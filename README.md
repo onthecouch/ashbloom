@@ -1,4 +1,6 @@
+<div align="center">
 # Ashbloom
+</div>
 
 <div align="center">
 
