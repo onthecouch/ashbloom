@@ -37,8 +37,8 @@
     --highlightOutlineColor: #44BFF1;      /* Ashbloom Sky */
     
     /* Text Colors */
-    --textColor: #e8e8e8;                  /* Ashbloom Text Light */
-    --dimTextColor: #c5c5c5;               /* Ashbloom Text Gray */
+    --textColor: #e8e2d0;                  /* Ashbloom Cream */
+    --dimTextColor: #a09880;               /* Ashbloom Muted Cream Gray */
     
     /* Gradients */
     --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
