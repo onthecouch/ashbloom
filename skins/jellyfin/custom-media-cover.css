@@ -1,21 +1,18 @@
-/* ElegantFin Media Covers - Ashbloom Edition (No Color Overlay) */
+/* ElegantFin Media Covers - Ashbloom Edition */
 :root {
-    /* --- IMAGE URLS (Fixed Links) --- */
-    /* REMOVED 'refs/heads/' from these URLs so they work */
-    --urlMoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/movies-cover.webp);
-    --urlTvshowsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/tv-cover.webp);
-    --urlBoxsetsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/anthology-cover.webp);
-    --urlMusicCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/music-cover.webp);
-
-    /* Default Placeholders (ElegantFin) */
-    --urlLivetvCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/livetv.webp);
-    --urlPlaylistsCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/playlists.webp);
-    --urlHomevideosCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/homevideos.webp);
-    --urlBooksCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/books.webp);
-    --urlFoldersCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/folders.webp);
-    --urlMixedCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/mixed.webp);
-    --urlRecordedmoviesCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/recordedmovies.webp);
-    --urlRecordedtvCover: url(https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin/main/Theme/assets/img/library-covers/recordedtv.webp);
+    /* --- IMAGE URLS --- */
+    --urlMoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/movies-cover.webp);
+    --urlTvshowsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/tv-cover.webp);
+    --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
+    --urlPlaylistsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
+    --urlBoxsetsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/anthology-cover.webp);
+    --urlMusicCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/music-cover.webp);
+    --urlHomevideosCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
+    --urlBooksCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
+    --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
+    --urlMixedCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/mixed.webp);
+    --urlRecordedmoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedmovies.webp);
+    --urlRecordedtvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedtv.webp);
 }
 
 /* --- LOGIC (Cleaned) --- */
