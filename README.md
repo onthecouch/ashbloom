@@ -1,6 +1,6 @@
 # Ashbloom
 
-So, this is Ashbloom. It's essentially my personal color palette that I've started rolling out across my self-hosted apps.
+It's essentially my personal color palette that I've started rolling out across my self-hosted apps.
 
 I wanted something that felt grounded but still had some life to it. The foundation is mostly dark slate and charcoal—pretty standard for dark mode lovers—but I’ve thrown in specific blooming accents to make things pop. You'll see a lot of Gold, Sky Blue, Purple, Rose, and Pink gradients throughout.
 
@@ -10,7 +10,6 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 
 ## Skins
 
-Here’s what I have so far.
 
 ### Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
@@ -26,6 +25,13 @@ I’ve only really tested this on **Jellyfin Media Player (JMP)** on Windows. If
 ```css
 @import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/ashbloom-jellyfin.css');
 ```
+**To add custom media cover of mine**
+add this after previous css
+```css
+@import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/custom-media-cover.css');
+```
+
+The CSS is without text title, so i can redesign it later with text title on the image directly.
 
 ---
 
