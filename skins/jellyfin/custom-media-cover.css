@@ -2,12 +2,12 @@
 :root {
     /* --- IMAGE URLS --- */
     /* REPLACE THESE LINKS with your new custom uploaded images later */
-    --urlMoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/movies.webp);
-    --urlTvshowsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/tvshows.webp);
+    --urlMoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/movies-cover.webp);
+    --urlTvshowsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/tv-cover.webp);
     --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
     --urlPlaylistsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
-    --urlBoxsetsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/boxsets.webp);
-    --urlMusicCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/music.webp);
+    --urlBoxsetsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/anthology-cover.webp);
+    --urlMusicCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/music-cover.webp);
     --urlHomevideosCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
     --urlBooksCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
     --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
