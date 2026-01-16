@@ -1,5 +1,5 @@
 <div align="center">
-# Ashbloom
+<h1>Ashbloom</h1>
 </div>
 
 <div align="center">
