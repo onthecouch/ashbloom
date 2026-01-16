@@ -15,8 +15,8 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
 
 **⚠️ A quick warning:**
-~~I’ve only really tested this on **Jellyfin Media Player (JMP)** on Windows. If you try to use this on a web browser (like Firefox), the header layout completely breaks. Honestly, I’m too lazy to fix the web compatibility right now since I exclusively use JMP. So, use with caution.~~
-*Fixed*
+
+Might not work on some browser or phone device.
 
 **How to install:**
 1. Open your Jellyfin Dashboard.
@@ -34,8 +34,18 @@ add this after previous css
 
 The CSS is without text title, so i can redesign it later with text title on the image directly.
 
-## Screenshot
 
+### Screenshot
+
+<p align="center">
+  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/front.png" alt="Ashbloom Front Screenshot" width="100%">
+  <br>
+  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/frontsidebar.png" alt="Ashbloom Sidebar" width="100%">
+  <br>
+  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/login.png" alt="Ashbloom Login" width="100%">
+  <br>
+  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/music.png" alt="Ashbloom Seekbar" width="100%">
+</p>
 
 
 ---
