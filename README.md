@@ -35,18 +35,22 @@ add this after previous css
 The CSS is without text title, so i can redesign it later with text title on the image directly.
 
 
-### Screenshot
-
+<details>
+  <summary><b>Click to view Ashbloom Screenshots</b></summary>
+  <br>
 <p align="center">
   <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/front.png" alt="Ashbloom Front Screenshot" width="100%">
   <br>
+  <br>
   <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/frontsidebar.png" alt="Ashbloom Sidebar" width="100%">
+  <br>
   <br>
   <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/login.png" alt="Ashbloom Login" width="100%">
   <br>
+  <br>
   <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/music.png" alt="Ashbloom Seekbar" width="100%">
 </p>
-
+</details>
 
 ---
 
