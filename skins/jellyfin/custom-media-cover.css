@@ -1,23 +1,7 @@
-/* ElegantFin Media Covers - Ashbloom Edition */
+/* ElegantFin Media Covers - Ashbloom Edition (No Color Overlay) */
 :root {
-    /* --- COLOR VARIABLES (Ashbloom Palette) --- */
-    --colorOverlayMoviesCover: rgb(69, 55, 155);       /* Ashbloom Purple */
-    --colorOverlayTvshowsCover: rgb(68, 191, 241);     /* Ashbloom Sky */
-    --colorOverlayMusicCover: rgb(214, 89, 135);       /* Ashbloom Rose */
-    --colorOverlayBoxsetsCover: rgb(192, 169, 82);     /* Ashbloom Gold */
-    --colorOverlayPlaylistsCover: rgb(246, 172, 180);  /* Ashbloom Pink */
-    --colorOverlayLivetvCover: rgb(214, 89, 135);      /* Ashbloom Rose (Shared) */
-    --colorOverlayHomevideosCover: rgb(246, 172, 180); /* Ashbloom Pink (Shared) */
-    --colorOverlayBooksCover: rgb(232, 226, 208);      /* Ashbloom Cream */
-    
-    /* Neutral/System Colors (Dark Grey Base) */
-    --colorOverlayFoldersCover: rgb(32, 33, 36);
-    --colorOverlayMixedCover: rgb(32, 33, 36);
-    --colorOverlayRecordedmoviesCover: rgb(32, 33, 36);
-    --colorOverlayRecordedtvCover: rgb(32, 33, 36);
-
-    /* --- IMAGE URLS (Currently Default ElegantFin) --- */
-    /* Will update these URLs later */
+    /* --- IMAGE URLS --- */
+    /* REPLACE THESE LINKS with your new custom uploaded images later */
     --urlMoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/movies.webp);
     --urlTvshowsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/tvshows.webp);
     --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
@@ -32,18 +16,18 @@
     --urlRecordedtvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedtv.webp);
 }
 
-/* --- LOGIC (Do not touch unless necessary) --- */
+/* --- LOGIC (Cleaned for Custom Images) --- */
 [data-type="CollectionFolder"] .defaultCardBackground,
 [data-type="UserView"] .defaultCardBackground,
 [data-type="CollectionFolder"] .cardContent,
 [data-type="UserView"] .cardContent {
-    filter: contrast(.85);
     background-size: cover !important;
     background-position: 50% !important;
-    background-blend-mode: multiply; /* This blends your new Colors with the Images */
+    background-color: transparent !important; /* Forces transparency so only image shows */
+    background-blend-mode: normal !important; /* DISABLES the blending/tinting */
 }
 
-/* Text Overlay Styling */
+/* Text Overlay Styling - Kept just in case, but usually hidden if text is in image */
 [data-type="CollectionFolder"] .cardContent::before,
 [data-type="UserView"] .cardContent::before {
     content: attr(aria-label);
@@ -82,16 +66,22 @@
     display: none;
 }
 
-/* --- ASSIGNMENTS --- */
-[data-collectiontype="movies"] .cardContent { background-color: var(--colorOverlayMoviesCover) !important; background-image: var(--urlMoviesCover) !important; }
-[data-collectiontype="tvshows"] .cardContent { background-color: var(--colorOverlayTvshowsCover) !important; background-image: var(--urlTvshowsCover) !important; }
-[data-collectiontype="livetv"] .cardContent { background-color: var(--colorOverlayLivetvCover) !important; background-image: var(--urlLivetvCover) !important; }
-[data-collectiontype="music"] .cardContent { background-color: var(--colorOverlayMusicCover) !important; background-image: var(--urlMusicCover) !important; }
-[data-collectiontype="homevideos"] .cardContent { background-color: var(--colorOverlayHomevideosCover) !important; background-image: var(--urlHomevideosCover) !important; }
-[data-collectiontype="books"] .cardContent { background-color: var(--colorOverlayBooksCover) !important; background-image: var(--urlBooksCover) !important; }
-[data-collectiontype="boxsets"] .cardContent { background-color: var(--colorOverlayBoxsetsCover) !important; background-image: var(--urlBoxsetsCover) !important; }
-[data-collectiontype="folders"] .cardContent { background-color: var(--colorOverlayFoldersCover) !important; background-image: var(--urlFoldersCover) !important; }
-[data-collectiontype="playlists"] .cardContent { background-color: var(--colorOverlayPlaylistsCover) !important; background-image: var(--urlPlaylistsCover) !important; }
-[data-prefix="MIX"] .cardContent { background-color: var(--colorOverlayMixedCover) !important; background-image: var(--urlMixedCover) !important; }
-[data-collectiontype="movies"][data-prefix="REC"] .cardContent { background-color: var(--colorOverlayRecordedmoviesCover) !important; background-image: var(--urlRecordedmoviesCover) !important; }
-[data-prefix="REC"] .cardContent { background-color: var(--colorOverlayRecordedtvCover) !important; background-image: var(--urlRecordedtvCover) !important; }
+/* --- ASSIGNMENTS (Image Only) --- */
+[data-collectiontype="movies"] .cardContent { background-image: var(--urlMoviesCover) !important; }
+[data-collectiontype="tvshows"] .cardContent { background-image: var(--urlTvshowsCover) !important; }
+[data-collectiontype="livetv"] .cardContent { background-image: var(--urlLivetvCover) !important; }
+[data-collectiontype="music"] .cardContent { background-image: var(--urlMusicCover) !important; }
+[data-collectiontype="homevideos"] .cardContent { background-image: var(--urlHomevideosCover) !important; }
+[data-collectiontype="books"] .cardContent { background-image: var(--urlBooksCover) !important; }
+[data-collectiontype="boxsets"] .cardContent { background-image: var(--urlBoxsetsCover) !important; }
+[data-collectiontype="folders"] .cardContent { background-image: var(--urlFoldersCover) !important; }
+[data-collectiontype="playlists"] .cardContent { background-image: var(--urlPlaylistsCover) !important; }
+[data-prefix="MIX"] .cardContent { background-image: var(--urlMixedCover) !important; }
+[data-collectiontype="movies"][data-prefix="REC"] .cardContent { background-image: var(--urlRecordedmoviesCover) !important; }
+[data-prefix="REC"] .cardContent { background-image: var(--urlRecordedtvCover) !important; }
+
+/* Remove text title overlay on media covers */
+[data-type="CollectionFolder"] .cardContent::before,
+[data-type="UserView"] .cardContent::before {
+    content: none !important;
+}
