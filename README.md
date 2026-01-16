@@ -14,8 +14,9 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 ### Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
 
-**⚠️ A quick warning:**
-I’ve only really tested this on **Jellyfin Media Player (JMP)** on Windows. If you try to use this on a web browser (like Firefox), the header layout completely breaks. Honestly, I’m too lazy to fix the web compatibility right now since I exclusively use JMP. So, use with caution.
+**⚠️ ~~A quick warning:**~~
+~~I’ve only really tested this on **Jellyfin Media Player (JMP)** on Windows. If you try to use this on a web browser (like Firefox), the header layout completely breaks. Honestly, I’m too lazy to fix the web compatibility right now since I exclusively use JMP. So, use with caution.~~
+*Fixed*
 
 **How to install:**
 1. Open your Jellyfin Dashboard.
