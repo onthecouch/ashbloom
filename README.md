@@ -39,13 +39,13 @@ The CSS is without text title, so i can redesign it later with text title on the
   <summary><b>Click to view Ashbloom Screenshots</b></summary>
   <br>
 <p align="center">
-  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/front.png" alt="Ashbloom Front Screenshot" width="100%">
+  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/login.png" alt="Ashbloom Login" width="100%">
   <br>
   <br>
   <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/frontsidebar.png" alt="Ashbloom Sidebar" width="100%">
   <br>
   <br>
-  <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/login.png" alt="Ashbloom Login" width="100%">
+<img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/front.png" alt="Ashbloom Front Screenshot" width="100%">
   <br>
   <br>
   <img src="https://github.com/onthecouch/ashbloom/raw/main/skins/jellyfin/screenshot/music.png" alt="Ashbloom Seekbar" width="100%">
@@ -66,6 +66,16 @@ A very stripped-down, flat theme for Uptime Kuma using the IBM Plex Mono font. I
 @import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/uptime-kuma/index.css');
 ```
 
+
+<details>
+  <summary><b>Click to view Uptime Kuma Screenshot</b></summary>
+  <br>
+<p align="center">
+ <img src="https://github.com/onthecouch/ashbloom/raw//main/skins/uptime-kuma/screenshot/uptime-kuma.png" alt="Uptime Kuma Status Page" width="100%">
+ <br>
+ <br>
+</p>
+</details>
 ---
 
 **Future Stuff**
