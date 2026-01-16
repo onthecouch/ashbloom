@@ -90,7 +90,7 @@
     --itemTitleVisibility: none;
     --miniOverlayButtonVisibility: block;
     --cardHoverEffect: "";
-    --appBarHeight: 4em;
+    --appBarHeight: 3.5em;
     --backdropTrimFromTop: 10%;
 }
 
@@ -148,6 +148,10 @@ body {
 }
 
 /* ASHBLOOM GRADIENT HEADER LINE */
+.skinHeader {
+    height: var(--appBarHeight) !important;
+}
+
 .skinHeader:not(.osdHeader)::before {
     content: '';
     position: absolute;
