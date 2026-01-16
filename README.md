@@ -24,15 +24,19 @@ This one is a heavy modification of the ElegantFin theme. It creates a much dark
 3. Paste this line in:
 
 ```css
-@import url('https://rawcdn.githack.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/ashbloom-jellyfin.css');
+@import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/ashbloom-jellyfin.css');
 ```
 **To add custom media cover of mine**
 add this after previous css
 ```css
-@import url('https://rawcdn.githack.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/custom-media-cover.css');
+@import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/custom-media-cover.css');
 ```
 
 The CSS is without text title, so i can redesign it later with text title on the image directly.
+
+## Screenshot
+
+
 
 ---
 
