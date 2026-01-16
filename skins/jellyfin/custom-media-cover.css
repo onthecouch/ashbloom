@@ -33,19 +33,18 @@
 }
 
 /* --- ASSIGNMENTS --- */
-/* Changed to .defaultCardBackground to override theme gradient */
-[data-collectiontype="movies"] .defaultCardBackground { background-image: var(--urlMoviesCover) !important; }
-[data-collectiontype="tvshows"] .defaultCardBackground { background-image: var(--urlTvshowsCover) !important; }
-[data-collectiontype="livetv"] .defaultCardBackground { background-image: var(--urlLivetvCover) !important; }
-[data-collectiontype="music"] .defaultCardBackground { background-image: var(--urlMusicCover) !important; }
-[data-collectiontype="homevideos"] .defaultCardBackground { background-image: var(--urlHomevideosCover) !important; }
-[data-collectiontype="books"] .defaultCardBackground { background-image: var(--urlBooksCover) !important; }
-[data-collectiontype="boxsets"] .defaultCardBackground { background-image: var(--urlBoxsetsCover) !important; }
-[data-collectiontype="folders"] .defaultCardBackground { background-image: var(--urlFoldersCover) !important; }
-[data-collectiontype="playlists"] .defaultCardBackground { background-image: var(--urlPlaylistsCover) !important; }
-[data-prefix="MIX"] .defaultCardBackground { background-image: var(--urlMixedCover) !important; }
-[data-collectiontype="movies"][data-prefix="REC"] .defaultCardBackground { background-image: var(--urlRecordedmoviesCover) !important; }
-[data-prefix="REC"] .defaultCardBackground { background-image: var(--urlRecordedtvCover) !important; }
+[data-collectiontype="movies"] .cardContent { background-image: var(--urlMoviesCover) !important; }
+[data-collectiontype="tvshows"] .cardContent { background-image: var(--urlTvshowsCover) !important; }
+[data-collectiontype="livetv"] .cardContent { background-image: var(--urlLivetvCover) !important; }
+[data-collectiontype="music"] .cardContent { background-image: var(--urlMusicCover) !important; }
+[data-collectiontype="homevideos"] .cardContent { background-image: var(--urlHomevideosCover) !important; }
+[data-collectiontype="books"] .cardContent { background-image: var(--urlBooksCover) !important; }
+[data-collectiontype="boxsets"] .cardContent { background-image: var(--urlBoxsetsCover) !important; }
+[data-collectiontype="folders"] .cardContent { background-image: var(--urlFoldersCover) !important; }
+[data-collectiontype="playlists"] .cardContent { background-image: var(--urlPlaylistsCover) !important; }
+[data-prefix="MIX"] .cardContent { background-image: var(--urlMixedCover) !important; }
+[data-collectiontype="movies"][data-prefix="REC"] .cardContent { background-image: var(--urlRecordedmoviesCover) !important; }
+[data-prefix="REC"] .cardContent { background-image: var(--urlRecordedtvCover) !important; }
 
 /* Remove text title overlay on media covers */
 [data-type="CollectionFolder"] .cardContent::before,
