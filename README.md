@@ -14,7 +14,7 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 ### Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
 
-**⚠️ ~~A quick warning:**~~
+**⚠️ A quick warning:**
 ~~I’ve only really tested this on **Jellyfin Media Player (JMP)** on Windows. If you try to use this on a web browser (like Firefox), the header layout completely breaks. Honestly, I’m too lazy to fix the web compatibility right now since I exclusively use JMP. So, use with caution.~~
 *Fixed*
 
@@ -24,12 +24,12 @@ This one is a heavy modification of the ElegantFin theme. It creates a much dark
 3. Paste this line in:
 
 ```css
-@import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/ashbloom-jellyfin.css');
+@import url('https://rawcdn.githack.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/ashbloom-jellyfin.css');
 ```
 **To add custom media cover of mine**
 add this after previous css
 ```css
-@import url('https://cdn.jsdelivr.net/gh/onthecouch/ashbloom@main/skins/jellyfin/custom-media-cover.css');
+@import url('https://rawcdn.githack.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/custom-media-cover.css');
 ```
 
 The CSS is without text title, so i can redesign it later with text title on the image directly.
