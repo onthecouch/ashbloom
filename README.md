@@ -1,5 +1,20 @@
 # Ashbloom
 
+<div align="center">
+
+| Swatch | Hex Code | Description |
+| :---: | :---: | :--- |
+| ![#D65987](https://placehold.co/80x40/D65987/D65987.png) | `#D65987` | Rose |
+| ![#F6ACB4](https://placehold.co/80x40/F6ACB4/F6ACB4.png) | `#F6ACB4` | Pink |
+| ![#c0a952](https://placehold.co/80x40/c0a952/c0a952.png) | `#c0a952` | Gold |
+| ![#e8e2d0](https://placehold.co/80x40/e8e2d0/e8e2d0.png) | `#e8e2d0` | Cream |
+| ![#44BFF1](https://placehold.co/80x40/44BFF1/44BFF1.png) | `#44BFF1` | Sky Blue |
+| ![#45379B](https://placehold.co/80x40/45379B/45379B.png) | `#45379B` | Deep Purple |
+| ![#202124](https://placehold.co/80x40/202124/202124.png) | `#202124` | Slate |
+
+</div>
+
+
 It's essentially my personal color palette that I've started rolling out across my self-hosted apps.
 
 I wanted something that felt grounded but still had some life to it. The foundation is mostly dark slate and charcoal—pretty standard for dark mode lovers—but I’ve thrown in specific blooming accents to make things pop. You'll see a lot of Gold, Sky Blue, Purple, Rose, and Pink gradients throughout.
