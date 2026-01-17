@@ -1,20 +1,18 @@
 /* ElegantFin Media Covers - Ashbloom Edition */
 :root {
-    /* --- IMAGE URLS --- */
+/* --- IMAGE URLS --- */
     --urlMoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/movies-cover.webp);
     --urlTvshowsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/tv-cover.webp);
     --urlBoxsetsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/anthology-cover.webp);
     --urlMusicCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/music-cover.webp);
-    
-    /* Default Placeholders (ElegantFin) */
-    --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
-    --urlPlaylistsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
-    --urlHomevideosCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
-    --urlBooksCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
-    --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
-    --urlMixedCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/mixed.webp);
-    --urlRecordedmoviesCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedmovies.webp);
-    --urlRecordedtvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/recordedtv.webp);
+    --urlLivetvCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/livetv-cover.webp);
+    --urlPlaylistsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/playlist-cover.webp);
+    --urlHomevideosCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/hvid-cover.webp);
+    --urlBooksCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/books-cover.webp);
+    --urlFoldersCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/fold-cover.webp);
+    --urlMixedCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/mixed-cover.webp);
+    --urlRecordedmoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/recmov-cover.webp);
+    --urlRecordedtvCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/rectv.webp);
 }
 
 /* --- LOGIC (Cleaned) --- */
