@@ -1,12 +1,14 @@
 /* ElegantFin Media Covers - Ashbloom Edition */
 :root {
     /* --- IMAGE URLS --- */
-    --urlMoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/movies-cover.webp);
-    --urlTvshowsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/tv-cover.webp);
+    --urlMoviesCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/movies-cover.webp);
+    --urlTvshowsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/tv-cover.webp);
+    --urlBoxsetsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/anthology-cover.webp);
+    --urlMusicCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/jellyfin/cover/music-cover.webp);
+    
+    /* Default Placeholders (ElegantFin) */
     --urlLivetvCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/livetv.webp);
     --urlPlaylistsCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/playlists.webp);
-    --urlBoxsetsCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/anthology-cover.webp);
-    --urlMusicCover: url(https://raw.githubusercontent.com/onthecouch/ashbloom/refs/heads/main/skins/jellyfin/cover/music-cover.webp);
     --urlHomevideosCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/homevideos.webp);
     --urlBooksCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/books.webp);
     --urlFoldersCover: url(https://raw.githubusercontent.com/lscambo13/ElegantFin/refs/heads/main/Theme/assets/img/library-covers/folders.webp);
@@ -26,7 +28,15 @@
     background-blend-mode: normal !important;
 }
 
-/* Hiding Default Icons */
+/* 2. HIDE the Text Title Overlay */
+[data-type="CollectionFolder"] .cardContent::before,
+[data-type="UserView"] .cardContent::before,
+.layout-tv [data-type="CollectionFolder"]::before,
+.layout-tv [data-type="UserView"]::before {
+    content: none !important;
+}
+
+/* 3. Hide Default Icons */
 [data-type="CollectionFolder"] .cardImageIcon:not(.quiz)::before,
 [data-type="UserView"] .cardImageIcon:not(.quiz)::before {
     display: none;
@@ -45,11 +55,3 @@
 [data-prefix="MIX"] .cardContent { background-image: var(--urlMixedCover) !important; }
 [data-collectiontype="movies"][data-prefix="REC"] .cardContent { background-image: var(--urlRecordedmoviesCover) !important; }
 [data-prefix="REC"] .cardContent { background-image: var(--urlRecordedtvCover) !important; }
-
-/* Remove text title overlay on media covers */
-[data-type="CollectionFolder"] .cardContent::before,
-[data-type="UserView"] .cardContent::before,
-.layout-tv [data-type="CollectionFolder"]::before,
-.layout-tv [data-type="UserView"]::before {
-    content: none !important;
-}
