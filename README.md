@@ -6,12 +6,13 @@
 
 | Swatch | Hex Code | Description |
 | :---: | :---: | :--- |
-| ![#D65987](https://placehold.co/80x40/D65987/D65987.png) | `#D65987` | Rose |
-| ![#F6ACB4](https://placehold.co/80x40/F6ACB4/F6ACB4.png) | `#F6ACB4` | Pink |
-| ![#c0a952](https://placehold.co/80x40/c0a952/c0a952.png) | `#c0a952` | Gold |
+| ![#F04770](https://placehold.co/80x40/F04770/F04770.png) | `#F04770` | Rose |
+| ![#FF9E64](https://placehold.co/80x40/FF9E64/FF9E64.png) | `#FF9E64` | Orange |
+| ![#F2CD60](https://placehold.co/80x40/F2CD60/F2CD60.png) | `#F2CD60` | Gold |
+| ![#6DEcb9](https://placehold.co/80x40/6DEcb9/6DEcb9.png) | `#6DEcb9` | Mint |
+| ![#3DD6F5](https://placehold.co/80x40/3DD6F5/3DD6F5.png) | `#3DD6F5` | Cyan |
+| ![#9E86FF](https://placehold.co/80x40/9E86FF/9E86FF.png) | `#9E86FF` | Purple |
 | ![#e8e2d0](https://placehold.co/80x40/e8e2d0/e8e2d0.png) | `#e8e2d0` | Cream |
-| ![#44BFF1](https://placehold.co/80x40/44BFF1/44BFF1.png) | `#44BFF1` | Sky Blue |
-| ![#45379B](https://placehold.co/80x40/45379B/45379B.png) | `#45379B` | Deep Purple |
 | ![#202124](https://placehold.co/80x40/202124/202124.png) | `#202124` | Slate |
 
 </div>
