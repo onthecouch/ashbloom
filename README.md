@@ -28,6 +28,44 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 
 ## Skins
 
+### oh-my-posh
+
+**Typography:** Maple Mono NF (Regular, 14pt).
+
+**Global Behavior**
+
+  * Transient Prompt: Enabled. Collapses the previous prompt into a single Rose dot () upon execution to prevent visual clutter.
+
+  * Console Title: Dynamic. Updates window title to Ashbloom :: <CurrentFolder>.
+
+  * Shell Integration: Enabled. Supports VS Code terminal navigation markers.
+
+**Segment Layout:**
+
+  * **Block 1 (Left):** Date (02 Jan 15:04) → Shell Icon → Git Status (Branch/Upstream/Staging).
+
+  * **Block 2 (Right):** Last Exit Code (Conditional) → Execution Time.
+
+  * **Block 3 (Left):** Current Path (Full).
+
+  * **Block 4 (Left):** Root Indicator (!) → Input Chevron (❯).
+
+**How to install**
+1. Download the themes.
+2. Open Powershell and run
+
+   ```powershell
+      notepad $PROFILE
+   ```
+
+3. Add the path `oh-my-posh init pwsh --config "$HOME\.config\oh-my-posh\ashbloom.omp.json" | Invoke-Expression`
+4. Reload `. $PROFILE`
+
+<details>
+  <summary><b>Click to view Ashbloom oh-my-posh theme</b></summary>
+  <br>
+<p align="center">
+
 
 ### Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
