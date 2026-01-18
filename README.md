@@ -34,7 +34,7 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 
 **Global Behavior**
 
-  * Transient Prompt: Enabled. Collapses the previous prompt into a single Rose dot () upon execution to prevent visual clutter.
+  * Transient Prompt: Enabled. Collapses the previous prompt into a single Rose dot (•) upon execution to prevent visual clutter.
 
   * Console Title: Dynamic. Updates window title to Ashbloom :: <CurrentFolder>.
 
@@ -65,7 +65,11 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
   <summary><b>Click to view Ashbloom oh-my-posh theme</b></summary>
   <br>
 <p align="center">
-
+   <img src="https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/oh-my-posh/scrot.png" alt="oh-my-posh term style' width="100%">
+</p>
+</details>
+<br>
+---
 
 ### Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
