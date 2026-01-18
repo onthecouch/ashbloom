@@ -30,6 +30,15 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 
 ### oh-my-posh
 
+<details>
+  <summary><b>Click to view oh-my-posh theme</b></summary>
+  <br>
+<p align="center">
+   <img src="https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/oh-my-posh/scrot.png" alt="oh-my-posh term style' width="100%">
+</p>
+</details>
+<br>
+
 **Typography:** Maple Mono NF (Regular, 14pt).
 
 **Global Behavior**
@@ -61,15 +70,22 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 3. Add the path `oh-my-posh init pwsh --config "$HOME\.config\oh-my-posh\ashbloom.omp.json" | Invoke-Expression`
 4. Reload `. $PROFILE`
 
+### k9s
+
 <details>
-  <summary><b>Click to view Ashbloom oh-my-posh theme</b></summary>
+  <summary><b>Click to view k9s skins</b></summary>
   <br>
 <p align="center">
-   <img src="https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/oh-my-posh/scrot.png" alt="oh-my-posh term style' width="100%">
+   <img src="" alt="k9s screenshot' width="100%">
 </p>
 </details>
 <br>
----
+
+**How to install**
+1. Download the skins and put it in k9s skins folder.
+`cd $env:LOCALAPPDATA\k9s`
+
+2. Update the config files in the same directory
 
 ### Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.

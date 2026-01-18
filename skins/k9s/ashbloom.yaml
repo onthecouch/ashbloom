@@ -1,0 +1,104 @@
+# -----------------------------------------------------------------------------
+# K9s Ashbloom Skin
+# -----------------------------------------------------------------------------
+
+# Ashbloom Palette Definitions
+foreground: &foreground "#e8e2d0"    # Ashbloom Cream
+background: &background "#202124"    # Ashbloom Slate
+current_line: &current_line "#3DD6F5" # Ashbloom Cyan (High Vis)
+selection: &selection "#2a2d30"      # Dark Slate (Subtle)
+comment: &comment "#55585b"          # Muted Grey
+cyan: &cyan "#3DD6F5"
+green: &green "#6DEcb9"              # Mint
+orange: &orange "#F2CD60"            # Gold
+magenta: &magenta "#9E86FF"          # Purple
+blue: &blue "#9E86FF"                # Mapped to Purple for consistency
+red: &red "#F04770"                  # Rose
+
+k9s:
+  body:
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *blue
+  prompt:
+    fgColor: *foreground
+    bgColor: *background
+    suggestColor: *orange
+  info:
+    fgColor: *magenta
+    sectionColor: *foreground
+  help:
+    fgColor: *foreground
+    bgColor: *background
+    keyColor: *magenta
+    numKeyColor: *blue
+    sectionColor: *green
+  dialog:
+    fgColor: *foreground
+    bgColor: *background
+    buttonFgColor: *foreground
+    buttonBgColor: *magenta
+    buttonFocusFgColor: *background  # Black Text
+    buttonFocusBgColor: *cyan        # Cyan Button
+    labelFgColor: *orange
+    fieldFgColor: *foreground
+  frame:
+    border:
+      fgColor: *selection
+      focusColor: *current_line
+    menu:
+      fgColor: *foreground
+      keyColor: *magenta
+      numKeyColor: *magenta
+    crumbs:
+      fgColor: *background           # Black Text
+      bgColor: *green                # Mint Background
+      activeColor: *orange
+    status:
+      newColor: *cyan
+      modifyColor: *blue
+      addColor: *green
+      errorColor: *red
+      highlightColor: *orange
+      killColor: *comment
+      completedColor: *comment
+    title:
+      fgColor: *foreground
+      bgColor: *background
+      highlightColor: *orange
+      counterColor: *blue
+      filterColor: *magenta
+  views:
+    charts:
+      bgColor: *background
+      defaultDialColors:
+        - *blue
+        - *red
+      defaultChartColors:
+        - *blue
+        - *red
+    table:
+      fgColor: *foreground
+      bgColor: *background
+      cursorFgColor: "#202124"       # CHANGED: Text turns black on selection
+      cursorBgColor: *current_line   # Selection is Cyan
+      header:
+        fgColor: *orange             # Gold Headers
+        bgColor: *background
+        sorterColor: *cyan
+    xray:
+      fgColor: *foreground
+      bgColor: *background
+      cursorColor: *current_line
+      graphicColor: *blue
+      showIcons: false
+    yaml:
+      keyColor: *magenta
+      colonColor: *blue
+      valueColor: *foreground
+    logs:
+      fgColor: *foreground
+      bgColor: *background
+      indicator:
+        fgColor: *cyan
+        bgColor: *background
