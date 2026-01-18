@@ -1,0 +1,23 @@
+{
+  "name": "Ashbloom",
+  "background": "#202124",
+  "foreground": "#E8E2D0",
+  "cursorColor": "#3DD6F5",
+  "selectionBackground": "#2A2D30",
+  "black": "#202124",
+  "blue": "#9E86FF",
+  "cyan": "#3DD6F5",
+  "green": "#6DECB9",
+  "purple": "#FF9E64",
+  "red": "#F04770",
+  "white": "#E8E2D0",
+  "yellow": "#F2CD60",
+  "brightBlack": "#55585B",
+  "brightBlue": "#9E86FF",
+  "brightCyan": "#3DD6F5",
+  "brightGreen": "#6DECB9",
+  "brightPurple": "#FF9E64",
+  "brightRed": "#F04770",
+  "brightWhite": "#FFFFFF",
+  "brightYellow": "#F2CD60"
+}
