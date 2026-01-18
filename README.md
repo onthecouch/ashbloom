@@ -76,7 +76,7 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
   <summary><b>Click to view k9s skins</b></summary>
   <br>
 <p align="center">
-   <img src="" alt="k9s screenshot' width="100%">
+   <img src="https://raw.githubusercontent.com/onthecouch/ashbloom/main/skins/k9s/k9s-scrot.png" alt="k9s screenshot' width="100%">
 </p>
 </details>
 <br>
