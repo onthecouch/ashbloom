@@ -28,7 +28,7 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 
 ## Skins
 
-### oh-my-posh
+### 1. oh-my-posh
 
 <details>
   <summary><b>Click to view oh-my-posh theme</b></summary>
@@ -70,7 +70,7 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 3. Add the path `oh-my-posh init pwsh --config "$HOME\.config\oh-my-posh\ashbloom.omp.json" | Invoke-Expression`
 4. Reload `. $PROFILE`
 
-### k9s
+### 2. k9s
 
 <details>
   <summary><b>Click to view k9s skins</b></summary>
@@ -87,7 +87,7 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 
 2. Update the config files in the same directory
 
-### Jellyfin
+### 3. Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
 
 **⚠️ A quick warning:**
@@ -130,7 +130,7 @@ The CSS is without text title, so i can redesign it later with text title on the
 
 ---
 
-### Uptime Kuma
+### 4. Uptime Kuma
 A very stripped-down, flat theme for Uptime Kuma using the IBM Plex Mono font. It gets rid of a lot of the default bulk and replaces the status indicators with the Ashbloom colors (Gold for up, Rose for down).
 
 **How to install:**
