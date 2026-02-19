@@ -90,9 +90,13 @@ It’s a work in progress, and I’m just dumping the skins here as I make them.
 ### 3. Jellyfin
 This one is a heavy modification of the ElegantFin theme. It creates a much darker, cleaner look with the Ashbloom gradients on seek bars and headers.
 
-**⚠️ A quick warning:**
+**✅ Compatibility:**
+- Works in all modern browsers (Chrome, Firefox, Edge, Safari)
+- ✅ **Now works with Jellyfin Desktop app** (Qt WebEngine)
+- Mobile browsers supported
 
-Might not work on some browser or phone device.
+**Recent Fixes:**
+- **v2025.02.19** - Fixed episode grid layout not displaying correctly in Jellyfin Desktop client (Qt WebEngine). Removed unsupported `:has()` CSS selector.
 
 **How to install:**
 1. Open your Jellyfin Dashboard.
