@@ -206,7 +206,6 @@ body {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    line-height: 1;
     vertical-align: middle;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -433,7 +432,6 @@ body {
     color: white;
     border: none;
     text-shadow: 1px 1px .1em black;
-    color: white;
 }
 
 .cardOverlayContainer:has(> button:hover) {
@@ -660,7 +658,6 @@ body {
 
 .detailPagePrimaryContainer {
     align-content: space-between;
-    align-items: stretch;
     justify-content: end;
     flex-direction: column;
     align-items: center;
@@ -2170,8 +2167,8 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .navMenuOption-selected {
-    background-color: rgba(214, 89, 135, 0.3) !important; /* Ashbloom Rose */
-    border: solid rgba(68, 191, 241, 0.3) 1px; /* Ashbloom Sky */
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 #itemDetailPage .detailSection {
