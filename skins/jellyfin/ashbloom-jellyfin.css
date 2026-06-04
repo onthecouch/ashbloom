@@ -1,7 +1,7 @@
 /* ElegantFin Theme v25.12.31 for Jellyfin - Ashbloom Edition by henrydns */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/round.css");
+@import url('https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Sharp.css');
 
 :root {
     --elegantFinFooterText: "ElegantFin - Ashbloom Edition";
@@ -211,7 +211,7 @@ body {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga";
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+    font-variation-settings: "FILL" 0, "wght" 250, "GRAD" 0, "opsz" 48;
 }
 
 .material-icons.info_outline:before {
@@ -298,7 +298,7 @@ body {
 }
 
 .playedIndicator {
-    background: var(--checkboxCheckedBgColor);
+    background: var(--uiAccentColor);
     border: var(--defaultLighterBorder);
 }
 
@@ -323,9 +323,20 @@ body {
 .cardOverlayContainer {
     border-radius: var(--largeRadius) !important;
     border: solid rgb(255 255 255 / 65%) .1em;
-    mix-blend-mode: plus-lighter;
-    background: var(--hoverGradient);
     transition: .5s;
+}
+
+.cardOverlayContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--hoverGradient);
+    mix-blend-mode: plus-lighter;
+    border-radius: var(--largeRadius);
+    z-index: 0;
 }
 
 .cardBox:not(.visualCardBox) .cardPadder {
@@ -333,9 +344,6 @@ body {
     background-color: var(--lighterGradientPoint);
 }
 
-.cardOverlayContainer > .cardOverlayFab-primary {
-    display: none;
-}
 
 .cardOverlayContainer:after {
     content: var(--cardHoverEffect);
@@ -387,6 +395,11 @@ body {
     z-index: 2;
 }
 
+.cardOverlayContainer > .cardOverlayFab-primary {
+    background-color: var(--uiAccentColor) !important;
+    border-color: var(--uiAccentColor) !important;
+}
+
 .cardOverlayContainer > .cardOverlayFab-primary:hover,
 .listItemImageButton:hover {
     color: white;
@@ -406,8 +419,15 @@ body {
 }
 
 .layout-desktop .cardOverlayButton-br button {
-    color: white;
     text-shadow: var(--shadow);
+}
+
+.layout-desktop .cardOverlayButton-br button[data-action="playstate"] {
+    color: var(--uiAccentColor) !important;
+}
+
+.layout-desktop .cardOverlayButton-br button[data-action="favorite"] {
+    color: var(--btnDeleteColor) !important; /* Ashbloom Rose */
 }
 
 .layout-mobile .cardOverlayButton {
@@ -1317,6 +1337,7 @@ progress + span {
     background-color: var(--drawerColor);
     border-right: var(--defaultBorder);
     backdrop-filter: var(--blurLarge);
+    width: 16em !important;
 }
 
 .mainDrawer-scrollContainer {
@@ -1340,7 +1361,7 @@ progress + span {
 }
 
 .playstatebutton-icon-played {
-    color: var(--checkboxCheckedBgColor);
+    color: var(--uiAccentColor) !important;
 }
 
 .videoOsdBottom.videoOsdBottom-maincontrols .btnPause {
@@ -2169,6 +2190,22 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .navMenuOption-selected {
     background-color: rgba(255, 255, 255, 0.12) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.mainDrawer .navMenuOption {
+    color: var(--textColor) !important;
+}
+
+.mainDrawer .navMenuOption .material-icons,
+.mainDrawer .navMenuOption .navMenuOptionIcon {
+    color: var(--textColor) !important;
+}
+
+.mainDrawer h2,
+.mainDrawer h3,
+.mainDrawer .sidebarHeader,
+.mainDrawer .sidebarSectionHeader {
+    color: var(--uiAccentColor) !important;
 }
 
 #itemDetailPage .detailSection {
@@ -3542,4 +3579,84 @@ a:hover {
 [class*="VolumeSlider"] .mdl-slider-background-lower,
 [class*="volumeSlider"] .mdl-slider-background-lower {
     background: #44BFF1 !important; /* Ashbloom Sky Blue */
+}
+
+/* Card Text Styling: Cream titles, Blue metadata/years */
+.cardText-first,
+.cardText-first a {
+    color: var(--textColor) !important;
+}
+
+.cardText-secondary,
+.cardText-secondary a {
+    color: var(--uiAccentColor) !important;
+}
+
+/* Active favorite heart color (Rose) */
+.buttonActive.favorite-button,
+.favorite-button.buttonActive,
+.favorite-button-active {
+    color: var(--btnDeleteColor) !important; /* Ashbloom Rose */
+}
+
+:root{
+  --extraCardButtonsVisibility: block;
+}
+
+:root{
+  --overlayPlayButtonPosition: 50%;
+}
+
+}
+
+/* Volume Slider Thumb - Hollow Ring Style */
+/* Chrome/Safari/Edge/CEF */
+[class*="VolumeSlider"] .mdl-slider::-webkit-slider-thumb,
+[class*="volumeSlider"] .mdl-slider::-webkit-slider-thumb,
+.nowPlayingVolumeSliderContainer input::-webkit-slider-thumb,
+.volumeSliderContainer .mdl-slider::-webkit-slider-thumb {
+    background: transparent !important;
+    border: 2px solid white !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+}
+
+/* Volume Slider Thumb - Small Solid Dot Style */
+/* Chrome/Safari/Edge/CEF */
+[class*="VolumeSlider"] .mdl-slider::-webkit-slider-thumb,
+[class*="volumeSlider"] .mdl-slider::-webkit-slider-thumb,
+.nowPlayingVolumeSliderContainer input::-webkit-slider-thumb,
+.volumeSliderContainer .mdl-slider::-webkit-slider-thumb {
+    background: transparent !important;
+    border: 2px solid white !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: white !important;
+    border: none !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+}
+
+/* Firefox */
+[class*="VolumeSlider"] .mdl-slider::-moz-range-thumb,
+[class*="volumeSlider"] .mdl-slider::-moz-range-thumb,
+.nowPlayingVolumeSliderContainer input::-moz-range-thumb,
+.volumeSliderContainer .mdl-slider::-moz-range-thumb {
+    background: transparent !important;
+    border: 2px solid white !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: white !important;
+    border: none !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+    transform: none !important;
 }
