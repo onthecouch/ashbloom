@@ -2418,7 +2418,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .alphaPickerButton {
     font-family: monospace;
     margin: .15em;
-    color: rgba(255, 158, 100, 0.97); /* Ashbloom Orange */
+    color: rgba(232, 226, 208, 0.97); /* Ashbloom Cream */
 }
 
 .alphaPickerButton-selected {
