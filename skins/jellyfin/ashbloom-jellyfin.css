@@ -1070,7 +1070,7 @@ body {
 
 #itemDetailPage:has(.subtitle),
 #itemDetailPage:has(.musicParentName) {
-    background: linear-gradient(180deg, transparent, var(--darkerGradientPointAlpha) 80%);
+    background: transparent !important;
 }
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,
