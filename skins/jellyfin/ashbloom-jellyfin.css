@@ -664,9 +664,8 @@ body {
 }
 
 .layout-desktop .detailPageWrapperContainer {
-    background: transparent;
+    background: transparent !important;
     min-height: 46vh;
-    background: linear-gradient(180deg, transparent, 17vh, var(--darkerGradientPointAlpha) 50vh);
 }
 
 .layout-tv .detailPageWrapperContainer {
