@@ -187,6 +187,8 @@ body {
 /* Rest of your ElegantFin CSS with Ashbloom colors integrated... */
 
 /* Font icons */
+/* Disabled subsetted font-face override to restore the full font from round.css cdn */
+/*
 @font-face {
     font-family: "Material Icons Round";
     font-style: normal;
@@ -194,6 +196,7 @@ body {
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v267/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190Fjzag.woff2) format("woff2");
 }
+*/
 
 .material-icons {
     font-family: var(--iconPack) !important;
@@ -1591,26 +1594,35 @@ progress + span {
     overflow: hidden !important; 
 }
 
-/* Liquid-glass edge reflection for the context menu */
 .dialog::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1.4px;
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.45) 0%, 
-        rgba(255, 255, 255, 0.15) 20%,
-        rgba(255, 255, 255, 0) 40%, 
-        rgba(255, 255, 255, 0) 60%,
-        rgba(255, 255, 255, 0.15) 80%, 
-        rgba(255, 255, 255, 0.45) 100%) !important;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
-    -webkit-mask-composite: xor !important;
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box !important;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.45) 0%, 
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%, 
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%, 
+    rgba(255, 255, 255, 0.45) 100%) !important;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
+  -webkit-mask-clip: content, border !important;
+  -webkit-mask-origin: content, border !important;
+  -webkit-mask-composite: destination-out !important;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@supports (mask-composite: exclude) {
+  .dialog::before {
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
+    mask-clip: content-box, border-box !important;
+    mask-origin: content-box, border-box !important;
     mask-composite: exclude !important;
-    pointer-events: none;
-    z-index: 10;
+  }
 }
 
 [dir="ltr"] .emby-collapsible-button {
@@ -3071,22 +3083,33 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page::before {
-    content: '' !important;
-    position: absolute !important;
-    inset: 0 !important;
-    border-radius: inherit !important;
-    padding: 1.4px !important;
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.45) 0%, 
-        rgba(255, 255, 255, 0.15) 20%,
-        rgba(255, 255, 255, 0) 40%, 
-        rgba(255, 255, 255, 0) 60%,
-        rgba(255, 255, 255, 0.15) 80%, 
-        rgba(255, 255, 255, 0.45) 100%) !important;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
-    -webkit-mask-composite: xor !important;
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  box-sizing: border-box !important;
+  border-radius: inherit !important;
+  padding: 1.4px !important;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.45) 0%, 
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%, 
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%, 
+    rgba(255, 255, 255, 0.45) 100%) !important;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
+  -webkit-mask-clip: content, border !important;
+  -webkit-mask-origin: content, border !important;
+  -webkit-mask-composite: destination-out !important;
+  pointer-events: none !important;
+}
+
+@supports (mask-composite: exclude) {
+  #loginPage .padded-left.padded-right.padded-bottom-page::before {
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
+    mask-clip: content-box, border-box !important;
+    mask-origin: content-box, border-box !important;
     mask-composite: exclude !important;
-    pointer-events: none !important;
+  }
 }
 
 .manualLoginForm .sectionTitle,
@@ -3502,23 +3525,33 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 }
 
 .sectionTabs .emby-tab-button-active::after {
-    content: '' !important;
-    position: absolute !important;
-    inset: 0 !important;
-    border-radius: inherit !important;
-    padding: 1.4px !important;
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.45) 0%, 
-        rgba(255, 255, 255, 0.15) 20%,
-        rgba(255, 255, 255, 0) 40%, 
-        rgba(255, 255, 255, 0) 60%,
-        rgba(255, 255, 255, 0.15) 80%, 
-        rgba(255, 255, 255, 0.45) 100%) !important;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
-    mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0) !important;
-    -webkit-mask-composite: xor !important;
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  box-sizing: border-box !important;
+  border-radius: inherit !important;
+  padding: 1.4px !important;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.45) 0%, 
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%, 
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%, 
+    rgba(255, 255, 255, 0.45) 100%) !important;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
+  -webkit-mask-clip: content, border !important;
+  -webkit-mask-origin: content, border !important;
+  -webkit-mask-composite: destination-out !important;
+  pointer-events: none !important;
+}
+
+@supports (mask-composite: exclude) {
+  .sectionTabs .emby-tab-button-active::after {
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
+    mask-clip: content-box, border-box !important;
+    mask-origin: content-box, border-box !important;
     mask-composite: exclude !important;
-    pointer-events: none !important;
+  }
 }
 
 .libraryPage:not(.noSecondaryNavPage) {
@@ -3714,8 +3747,6 @@ a:hover {
   --overlayPlayButtonPosition: 50%;
 }
 
-}
-
 /* Volume Slider Thumb - Small Solid Dot Style */
 /* Chrome/Safari/Edge/CEF */
 [class*="VolumeSlider"] .mdl-slider::-webkit-slider-thumb,
@@ -3766,20 +3797,31 @@ a:hover {
 }
 
 .iconOsd::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1.4px;
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.45) 0%, 
-        rgba(255, 255, 255, 0.15) 20%,
-        rgba(255, 255, 255, 0) 40%, 
-        rgba(255, 255, 255, 0) 60%,
-        rgba(255, 255, 255, 0.15) 80%, 
-        rgba(255, 255, 255, 0.45) 100%) !important;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box !important;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.45) 0%, 
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%, 
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%, 
+    rgba(255, 255, 255, 0.45) 100%) !important;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-clip: content, border;
+  -webkit-mask-origin: content, border;
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+}
+
+@supports (mask-composite: exclude) {
+  .iconOsd::before {
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    mask-clip: content-box, border-box;
+    mask-origin: content-box, border-box;
     mask-composite: exclude;
-    pointer-events: none;
+  }
 }
