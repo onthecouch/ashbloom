@@ -1,7 +1,7 @@
 /* ElegantFin Theme v25.12.31 for Jellyfin - Ashbloom Edition by henrydns */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url('https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/round.css');
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/round.css");
 
 :root {
     --elegantFinFooterText: "ElegantFin - Ashbloom Edition";
@@ -187,8 +187,6 @@ body {
 /* Rest of your ElegantFin CSS with Ashbloom colors integrated... */
 
 /* Font icons */
-/* Disabled subsetted font-face override to restore the full font from round.css cdn */
-/*
 @font-face {
     font-family: "Material Icons Round";
     font-style: normal;
@@ -196,7 +194,6 @@ body {
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v267/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190Fjzag.woff2) format("woff2");
 }
-*/
 
 .material-icons {
     font-family: var(--iconPack) !important;
@@ -209,12 +206,13 @@ body {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
+    line-height: 1;
     vertical-align: middle;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga";
-    font-variation-settings: "FILL" 0, "wght" 250, "GRAD" 0, "opsz" 48;
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 .material-icons.info_outline:before {
@@ -301,7 +299,7 @@ body {
 }
 
 .playedIndicator {
-    background: var(--uiAccentColor);
+    background: var(--checkboxCheckedBgColor);
     border: var(--defaultLighterBorder);
 }
 
@@ -326,20 +324,9 @@ body {
 .cardOverlayContainer {
     border-radius: var(--largeRadius) !important;
     border: solid rgb(255 255 255 / 65%) .1em;
-    transition: .5s;
-}
-
-.cardOverlayContainer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--hoverGradient);
     mix-blend-mode: plus-lighter;
-    border-radius: var(--largeRadius);
-    z-index: 0;
+    background: var(--hoverGradient);
+    transition: .5s;
 }
 
 .cardBox:not(.visualCardBox) .cardPadder {
@@ -347,6 +334,9 @@ body {
     background-color: var(--lighterGradientPoint);
 }
 
+.cardOverlayContainer > .cardOverlayFab-primary {
+    display: none;
+}
 
 .cardOverlayContainer:after {
     content: var(--cardHoverEffect);
@@ -398,11 +388,6 @@ body {
     z-index: 2;
 }
 
-.cardOverlayContainer > .cardOverlayFab-primary {
-    background-color: var(--uiAccentColor) !important;
-    border-color: var(--uiAccentColor) !important;
-}
-
 .cardOverlayContainer > .cardOverlayFab-primary:hover,
 .listItemImageButton:hover {
     color: white;
@@ -422,15 +407,8 @@ body {
 }
 
 .layout-desktop .cardOverlayButton-br button {
+    color: white;
     text-shadow: var(--shadow);
-}
-
-.layout-desktop .cardOverlayButton-br button[data-action="playstate"] {
-    color: var(--uiAccentColor) !important;
-}
-
-.layout-desktop .cardOverlayButton-br button[data-action="favorite"] {
-    color: var(--btnDeleteColor) !important; /* Ashbloom Rose */
 }
 
 .layout-mobile .cardOverlayButton {
@@ -455,6 +433,7 @@ body {
     color: white;
     border: none;
     text-shadow: 1px 1px .1em black;
+    color: white;
 }
 
 .cardOverlayContainer:has(> button:hover) {
@@ -667,8 +646,9 @@ body {
 }
 
 .layout-desktop .detailPageWrapperContainer {
-    background: transparent !important;
+    background: transparent;
     min-height: 46vh;
+    background: linear-gradient(180deg, transparent, 17vh, var(--darkerGradientPointAlpha) 50vh);
 }
 
 .layout-tv .detailPageWrapperContainer {
@@ -680,6 +660,7 @@ body {
 
 .detailPagePrimaryContainer {
     align-content: space-between;
+    align-items: stretch;
     justify-content: end;
     flex-direction: column;
     align-items: center;
@@ -1073,7 +1054,7 @@ body {
 
 #itemDetailPage:has(.subtitle),
 #itemDetailPage:has(.musicParentName) {
-    background: transparent !important;
+    background: linear-gradient(180deg, var(--darkerGradientPointAlpha) 80%, transparent);
 }
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,
@@ -1142,10 +1123,8 @@ h3, h4, h5, h6 {
 }
 
 .appfooter {
-    background: rgba(32, 33, 36, 0.45) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+    background-color: var(--headerColor) !important;
+    backdrop-filter: var(--blurLargest) !important;
 }
 
 .lyricPage {
@@ -1338,32 +1317,9 @@ progress + span {
 
 .mainDrawer,
 .drawer-open {
-    background: rgba(32, 33, 36, 0.35) !important;
-    background-blend-mode: luminosity !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border: none !important;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
-    overflow: hidden !important;
-    width: 16em !important;
-}
-
-.mainDrawer::before,
-.drawer-open::before {
-    content: "";
-    position: absolute; 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 1.4px; /* Renders the liquid-glass edge line only on the right edge */
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 255, 255, 0.2) 20%,
-        rgba(255, 255, 255, 0) 40%,
-        rgba(255, 255, 255, 0) 60%,
-        rgba(255, 255, 255, 0.2) 80%,
-        rgba(255, 255, 255, 0.5) 100%);
-    pointer-events: none;
+    background-color: var(--drawerColor);
+    border-right: var(--defaultBorder);
+    backdrop-filter: var(--blurLarge);
 }
 
 .mainDrawer-scrollContainer {
@@ -1387,7 +1343,7 @@ progress + span {
 }
 
 .playstatebutton-icon-played {
-    color: var(--uiAccentColor) !important;
+    color: var(--checkboxCheckedBgColor);
 }
 
 .videoOsdBottom.videoOsdBottom-maincontrols .btnPause {
@@ -1584,45 +1540,9 @@ progress + span {
 }
 
 .dialog {
-    background: rgba(255, 255, 255, 0.01) !important;
-    background-blend-mode: luminosity !important;
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
-    border: none !important;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: var(--blurDefault);
+    background-color: var(--drawerColor);
     min-width: 11em;
-    overflow: hidden !important; 
-}
-
-.dialog::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  box-sizing: border-box !important;
-  border-radius: inherit;
-  padding: 1.4px;
-  background: linear-gradient(180deg,
-    rgba(255, 255, 255, 0.45) 0%, 
-    rgba(255, 255, 255, 0.15) 20%,
-    rgba(255, 255, 255, 0) 40%, 
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0.15) 80%, 
-    rgba(255, 255, 255, 0.45) 100%) !important;
-  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
-  -webkit-mask-clip: content, border !important;
-  -webkit-mask-origin: content, border !important;
-  -webkit-mask-composite: destination-out !important;
-  pointer-events: none;
-  z-index: 10;
-}
-
-@supports (mask-composite: exclude) {
-  .dialog::before {
-    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
-    mask-clip: content-box, border-box !important;
-    mask-origin: content-box, border-box !important;
-    mask-composite: exclude !important;
-  }
 }
 
 [dir="ltr"] .emby-collapsible-button {
@@ -2083,10 +2003,10 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .MuiDrawer-paper {
-     background: var(--drawerColor);
-     backdrop-filter: var(--blurLarge);
-     border-right: var(--defaultBorder);
-     padding: .25em;
+    background: var(--drawerColor);
+    backdrop-filter: var(--blurLarge);
+    border-right: var(--defaultBorder);
+    padding: .25em;
 }
 
 .listItemImage {
@@ -2250,24 +2170,8 @@ div[data-role="controlgroup"] a.ui-btn-active {
 }
 
 .navMenuOption-selected {
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-}
-
-.mainDrawer .navMenuOption {
-    color: var(--textColor) !important;
-}
-
-.mainDrawer .navMenuOption .material-icons,
-.mainDrawer .navMenuOption .navMenuOptionIcon {
-    color: var(--textColor) !important;
-}
-
-.mainDrawer h2,
-.mainDrawer h3,
-.mainDrawer .sidebarHeader,
-.mainDrawer .sidebarSectionHeader {
-    color: var(--uiAccentColor) !important;
+    background-color: rgba(214, 89, 135, 0.3) !important; /* Ashbloom Rose */
+    border: solid rgba(68, 191, 241, 0.3) 1px; /* Ashbloom Sky */
 }
 
 #itemDetailPage .detailSection {
@@ -2480,11 +2384,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .alphaPickerButton {
     font-family: monospace;
     margin: .15em;
-    color: rgba(232, 226, 208, 0.97); /* Ashbloom Cream */
+    color: rgba(192, 169, 82, 0.4); /* Ashbloom Gold muted */
 }
 
 .alphaPickerButton-selected {
-    color: rgba(255, 158, 100, 0.97);
+    color: var(--checkboxCheckedBgColor) !important;
 }
 
 .alphaPicker-vertical {
@@ -2721,7 +2625,7 @@ div[data-role="controlgroup"] a.ui-btn-active {
     }
     
     .alphaPickerButton:hover {
-        color: rgba(255, 158, 100, 0.97);
+        color: rgba(255, 255, 255, 1);
     }
     
     .listItem:hover {
@@ -2771,14 +2675,11 @@ div[data-role="controlgroup"] a.ui-btn-active {
 .emby-select,
 .emby-input,
 .emby-textarea {
-    border: 1px solid rgba(255, 255, 255, 0.12) !important; /* Sharp, clean border */
-    background: rgba(32, 33, 36, 0.35) !important;          /* Translucent background */
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important; /* Subtle top edge reflection */
-    border-radius: var(--smallRadius) !important;
+    background-color: var(--selectorBackgroundColor);
+    border: var(--defaultLighterBorder);
+    border-radius: var(--smallRadius);
     padding: .5em !important;
-    color: var(--textColor) !important;
+    color: var(--textColor);
 }
 
 .inputLabelFocused,
@@ -3060,7 +2961,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     min-height: 100vh;
     padding: 1em;
     overflow-y: auto;
-    background: var(--loginPageBgUrl) !important;
+    background: linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)), var(--loginPageBgUrl);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3069,47 +2970,12 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
     width: 28em;
-    background: transparent !important; /* Removes the slate overlay color */
-    backdrop-filter: blur(10px) !important; /* Milder blur of 4px */
-    -webkit-backdrop-filter: blur(10px) !important;
+    background: rgba(32, 33, 36, .7);
     padding: 2em 2em 1em 2em !important;
-    border-radius: var(--largerRadius) !important;
-    border: none !important;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+    border-radius: var(--largerRadius);
+    backdrop-filter: var(--blurDefault);
     box-sizing: border-box;
     transform: translateY(3em);
-    position: relative;
-    overflow: hidden;
-}
-
-#loginPage .padded-left.padded-right.padded-bottom-page::before {
-  content: '' !important;
-  position: absolute !important;
-  inset: 0 !important;
-  box-sizing: border-box !important;
-  border-radius: inherit !important;
-  padding: 1.4px !important;
-  background: linear-gradient(180deg,
-    rgba(255, 255, 255, 0.45) 0%, 
-    rgba(255, 255, 255, 0.15) 20%,
-    rgba(255, 255, 255, 0) 40%, 
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0.15) 80%, 
-    rgba(255, 255, 255, 0.45) 100%) !important;
-  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
-  -webkit-mask-clip: content, border !important;
-  -webkit-mask-origin: content, border !important;
-  -webkit-mask-composite: destination-out !important;
-  pointer-events: none !important;
-}
-
-@supports (mask-composite: exclude) {
-  #loginPage .padded-left.padded-right.padded-bottom-page::before {
-    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
-    mask-clip: content-box, border-box !important;
-    mask-origin: content-box, border-box !important;
-    mask-composite: exclude !important;
-  }
 }
 
 .manualLoginForm .sectionTitle,
@@ -3504,54 +3370,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     height: 2.5em;
     color: var(--textColor);
     font-weight: 400;
-    border-radius: var(--smallRadius) !important;
-    background-color: transparent !important; /* Removed slate background */
+    border-radius: var(--largeRadius);
+    background-color: var(--darkerGradientPointAlpha);
 }
 
 .sectionTabs .emby-tab-button-active {
     margin: .25em .5em;
-    color: var(--textColor) !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    background-blend-mode: normal !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    box-shadow: none !important; /* Removes internal shadow */
-    border-radius: var(--smallRadius) !important;
-    overflow: hidden;
-    position: relative;
-}
-
-.sectionTabs .emby-tab-button-active::after {
-  content: '' !important;
-  position: absolute !important;
-  inset: 0 !important;
-  box-sizing: border-box !important;
-  border-radius: inherit !important;
-  padding: 1.4px !important;
-  background: linear-gradient(180deg,
-    rgba(255, 255, 255, 0.45) 0%, 
-    rgba(255, 255, 255, 0.15) 20%,
-    rgba(255, 255, 255, 0) 40%, 
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0.15) 80%, 
-    rgba(255, 255, 255, 0.45) 100%) !important;
-  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
-  -webkit-mask-clip: content, border !important;
-  -webkit-mask-origin: content, border !important;
-  -webkit-mask-composite: destination-out !important;
-  pointer-events: none !important;
-}
-
-@supports (mask-composite: exclude) {
-  .sectionTabs .emby-tab-button-active::after {
-    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) !important;
-    mask-clip: content-box, border-box !important;
-    mask-origin: content-box, border-box !important;
-    mask-composite: exclude !important;
-  }
+    color: black;
+    background-color: var(--textColor);
 }
 
 .libraryPage:not(.noSecondaryNavPage) {
@@ -3719,109 +3545,4 @@ a:hover {
 [class*="VolumeSlider"] .mdl-slider-background-lower,
 [class*="volumeSlider"] .mdl-slider-background-lower {
     background: #44BFF1 !important; /* Ashbloom Sky Blue */
-}
-
-/* Card Text Styling: Cream titles, Blue metadata/years */
-.cardText-first,
-.cardText-first a {
-    color: var(--textColor) !important;
-}
-
-.cardText-secondary,
-.cardText-secondary a {
-    color: var(--uiAccentColor) !important;
-}
-
-/* Active favorite heart color (Rose) */
-.buttonActive.favorite-button,
-.favorite-button.buttonActive,
-.favorite-button-active {
-    color: var(--btnDeleteColor) !important; /* Ashbloom Rose */
-}
-
-:root{
-  --extraCardButtonsVisibility: block;
-}
-
-:root{
-  --overlayPlayButtonPosition: 50%;
-}
-
-/* Volume Slider Thumb - Small Solid Dot Style */
-/* Chrome/Safari/Edge/CEF */
-[class*="VolumeSlider"] .mdl-slider::-webkit-slider-thumb,
-[class*="volumeSlider"] .mdl-slider::-webkit-slider-thumb,
-.nowPlayingVolumeSliderContainer input::-webkit-slider-thumb,
-.volumeSliderContainer .mdl-slider::-webkit-slider-thumb {
-    background: transparent !important;
-    border: 2px solid white !important;
-    width: 12px !important;
-    height: 12px !important;
-    background: white !important;
-    border: none !important;
-    width: 8px !important;
-    height: 8px !important;
-    border-radius: 50% !important;
-    box-sizing: border-box !important;
-    transform: none !important;
-}
-
-/* Firefox */
-[class*="VolumeSlider"] .mdl-slider::-moz-range-thumb,
-[class*="volumeSlider"] .mdl-slider::-moz-range-thumb,
-.nowPlayingVolumeSliderContainer input::-moz-range-thumb,
-.volumeSliderContainer .mdl-slider::-moz-range-thumb {
-    background: transparent !important;
-    border: 2px solid white !important;
-    width: 12px !important;
-    height: 12px !important;
-    background: white !important;
-    border: none !important;
-    width: 8px !important;
-    height: 8px !important;
-    border-radius: 50% !important;
-    box-sizing: border-box !important;
-    transform: none !important;
-}
-
-/* Glassmorphism Volume OSD Box - Milder Liquid Glass Look */
-.iconOsd {
-    background: rgba(255, 255, 255, 0.01) !important;
-    background-blend-mode: luminosity !important;
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
-    border: none !important;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
-    border-radius: var(--smallRadius) !important;
-    overflow: hidden;
-}
-
-.iconOsd::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  box-sizing: border-box !important;
-  border-radius: inherit;
-  padding: 1.4px;
-  background: linear-gradient(180deg,
-    rgba(255, 255, 255, 0.45) 0%, 
-    rgba(255, 255, 255, 0.15) 20%,
-    rgba(255, 255, 255, 0) 40%, 
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0.15) 80%, 
-    rgba(255, 255, 255, 0.45) 100%) !important;
-  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
-  -webkit-mask-clip: content, border;
-  -webkit-mask-origin: content, border;
-  -webkit-mask-composite: destination-out;
-  pointer-events: none;
-}
-
-@supports (mask-composite: exclude) {
-  .iconOsd::before {
-    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
-    mask-clip: content-box, border-box;
-    mask-origin: content-box, border-box;
-    mask-composite: exclude;
-  }
 }
